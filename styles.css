@@ -1,0 +1,154 @@
+:root {
+    --primary-color: #1DB954;
+    --background-color: #121212;
+    --surface-color: #282828;
+    --text-color: #FFFFFF;
+    --text-secondary: #B3B3B3;
+    --spacing: 20px;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Inter', sans-serif;
+    background-color: var(--background-color);
+    color: var(--text-color);
+    line-height: 1.6;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: var(--spacing);
+}
+
+header {
+    text-align: center;
+    margin-bottom: calc(var(--spacing) * 2);
+}
+
+h1 {
+    font-size: 2.5rem;
+    margin-bottom: var(--spacing);
+}
+
+.subtitle {
+    color: var(--text-secondary);
+    font-size: 1.1rem;
+}
+
+.spotify-button {
+    background-color: var(--primary-color);
+    color: var(--text-color);
+    border: none;
+    padding: 15px 30px;
+    border-radius: 25px;
+    font-size: 1.1rem;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin: 0 auto;
+    transition: transform 0.2s;
+}
+
+.spotify-button:hover {
+    transform: scale(1.05);
+}
+
+.now-playing-card {
+    background-color: var(--surface-color);
+    border-radius: 12px;
+    padding: var(--spacing);
+    margin-bottom: calc(var(--spacing) * 2);
+}
+
+#now-playing {
+    font-size: 1.2rem;
+    margin-bottom: var(--spacing);
+}
+
+.progress-bar {
+    height: 4px;
+    background-color: rgba(255, 255, 255, 0.1);
+    border-radius: 2px;
+    margin: var(--spacing) 0;
+    overflow: hidden;
+}
+
+.progress {
+    height: 100%;
+    background-color: var(--primary-color);
+    width: 0%;
+    transition: width 0.1s linear;
+}
+
+.controls {
+    display: flex;
+    justify-content: center;
+    gap: var(--spacing);
+}
+
+.control-button {
+    background-color: transparent;
+    border: 2px solid var(--text-color);
+    color: var(--text-color);
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    cursor: pointer;
+    transition: all 0.2s;
+}
+
+.control-button:hover {
+    background-color: var(--text-color);
+    color: var(--background-color);
+}
+
+h2 {
+    margin-bottom: var(--spacing);
+    font-size: 1.5rem;
+}
+
+.segments-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    gap: var(--spacing);
+}
+
+.segment-item {
+    background-color: var(--surface-color);
+    padding: var(--spacing);
+    border-radius: 8px;
+    transition: transform 0.2s;
+}
+
+.segment-item:hover {
+    transform: translateY(-2px);
+}
+
+footer {
+    text-align: center;
+    margin-top: calc(var(--spacing) * 3);
+    color: var(--text-secondary);
+    font-size: 0.9rem;
+}
+
+/* Add some responsive design */
+@media (max-width: 768px) {
+    .container {
+        padding: calc(var(--spacing) / 2);
+    }
+
+    h1 {
+        font-size: 2rem;
+    }
+
+    .segments-grid {
+        grid-template-columns: 1fr;
+    }
+} 

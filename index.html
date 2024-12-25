@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Infinite Podcast</title>
+    <link rel="stylesheet" href="styles.css">
+    <!-- Add Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap" rel="stylesheet">
+    <!-- Add Font Awesome for icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1><i class="fas fa-infinity"></i> Infinite Podcast</h1>
+        </header>
+        
+        <div id="login-container">
+            <button id="login-button" class="spotify-button">
+                <i class="fab fa-spotify"></i> Connect with Spotify
+            </button>
+        </div>
+        
+        <div id="player-container" style="display: none">
+            <div class="now-playing-card">
+                <div id="now-playing"></div>
+                <div class="progress-bar">
+                    <div class="progress"></div>
+                </div>
+                <div class="controls">
+                    <button id="play-pause" class="control-button">
+                        <i class="fas fa-play"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+
+        <div id="playlist">
+            <h2><i class="fas fa-list"></i> Up Next</h2>
+            <div id="segments-list" class="segments-grid"></div>
+        </div>
+
+        <footer>
+            <p>Random segments powered by Spotify from Rotten Mangos Podcast</p>
+        </footer>
+    </div>
+    <script src="https://sdk.scdn.co/spotify-player.js"></script>
+    <script src="script.js"></script>
+</body>
+</html> 
